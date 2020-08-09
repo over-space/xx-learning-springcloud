@@ -11,6 +11,6 @@ public class HelloService {
     private RestTemplate restTemplate;
 
     public String sayHello(){
-        return restTemplate.getForObject("http://eureka-client:8080/hello",String.class);
+        return restTemplate.getForObject("http://eureka-client/hello",String.class);
     }
 }
