@@ -23,49 +23,5 @@ import java.util.List;
 @SpringBootTest
 class SpringcloudEurekaClientApplicationTests {
 
-    private static final Logger logger = LoggerFactory.getLogger(SpringcloudEurekaClientApplicationTests.class);
 
-    @Autowired
-    private DiscoveryClient client;
-    @Autowired
-    private LoadBalancerClient loadBalancerClient;
-
-    @Test
-    void contextLoads() {
-        logger.info("client:{}", client.getClass());
-        List<String> services = client.getServices();
-        int index = 1;
-        for (String service : services) {
-            logger.info("server-{}:{}", index++, service);
-        }
-
-        List<ServiceInstance> instances = client.getInstances("eureka-client");
-        index = 1;
-        for (ServiceInstance instance : instances) {
-            get(instance);
-        }
-    }
-
-    @Test
-    void testRibbon(){
-        ServiceInstance instance = loadBalancerClient.choose("eureka-client");
-        get(instance);
-    }
-
-    private void get(ServiceInstance instance){
-        logger.info("instance:{}", ToStringBuilder.reflectionToString(instance));
-
-        URI uri = instance.getUri();
-        String host = uri.getHost();
-        int port = uri.getPort();
-
-        logger.info("host:{}", host);
-        logger.info("port:{}", port);
-
-        String address = "http://" + host + ":" + port + "/hello";
-
-        ResponseEntity<String> resp = new RestTemplate().getForEntity(address, String.class);
-
-        logger.info("resp:{}", resp);
-    }
 }
