@@ -8,7 +8,9 @@ import org.springframework.boot.actuate.health.Health;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class HelloController {
@@ -29,6 +31,13 @@ public class HelloController {
         return Lists.newArrayList("red", "yellow", "green");
     }
 
+    @GetMapping("/findById")
+    public Map<String, String> findById(String id){
+        Map<String, String> map = new HashMap<>(2);
+        map.put("id", id);
+        map.put("name", "lisi");
+        return map;
+    }
 
     @GetMapping("/updateServiceStatus")
     public Health updateServiceStatus(boolean status){
