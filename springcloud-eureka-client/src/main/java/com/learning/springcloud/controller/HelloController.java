@@ -25,12 +25,6 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello(){
-        try {
-            Thread.sleep(500);
-        }catch (Exception e){
-
-        }
-        System.out.println("===========================:" + port);
         return "hello spring cloud, port=" + port;
     }
 
