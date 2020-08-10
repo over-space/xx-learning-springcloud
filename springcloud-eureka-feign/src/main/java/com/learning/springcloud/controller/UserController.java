@@ -1,6 +1,6 @@
 package com.learning.springcloud.controller;
 
-import com.learning.springcloud.service.UserService;
+import com.learning.springcloud.service.fallback.UserServiceHystrix;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,7 +12,7 @@ import java.util.Map;
 public class UserController {
 
     @Autowired
-    private UserService userService;
+    private UserServiceHystrix userService;
 
     @RequestMapping("/list")
     public List<String> list(){
