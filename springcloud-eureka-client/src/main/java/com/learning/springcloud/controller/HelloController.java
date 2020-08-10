@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.actuate.health.Health;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
@@ -32,7 +33,7 @@ public class HelloController {
     }
 
     @GetMapping("/findById")
-    public Map<String, String> findById(String id){
+    public Map<String, String> findById(@RequestParam(name = "id") String id){
         Map<String, String> map = new HashMap<>(2);
         map.put("id", id);
         map.put("name", "lisi");

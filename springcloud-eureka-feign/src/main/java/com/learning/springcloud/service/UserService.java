@@ -14,5 +14,6 @@ public interface UserService {
     List<String> list();
 
     @GetMapping("/findById")
-    Map<String, String> findById(@RequestParam String id);
+    Map<String, String> findById(@RequestParam(name = "id") String id);
+
 }
