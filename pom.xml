@@ -24,6 +24,7 @@
         <module>springcloud-eureka-zuul</module>
         <module>springcloud-eureka-admin-server</module>
         <module>springcloud-eureka-config-server</module>
+        <module>springcloud-eureka-config-client</module>
     </modules>
 
     <properties>
