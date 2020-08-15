@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 @RestController
 public class HelloController {
@@ -20,12 +19,15 @@ public class HelloController {
     @Value("${server.port}")
     private String port;
 
+    @Value("${foo}")
+    private String foo;
+
     @Autowired
     private HealthService healthService;
 
     @GetMapping("/hello")
     public String hello(){
-        return "hello spring cloud, port=" + port;
+        return "hello spring cloud, port=" + port + ", foo=" + foo;
     }
 
     @GetMapping("/list")
