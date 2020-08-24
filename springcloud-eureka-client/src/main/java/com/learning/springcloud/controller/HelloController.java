@@ -19,7 +19,7 @@ public class HelloController {
     @Value("${server.port}")
     private String port;
 
-    @Value("${foo}")
+    //@Value("${foo}")
     private String foo;
 
     @Autowired
