@@ -19,12 +19,16 @@
         <module>springcloud-eureka-server</module>
         <module>springcloud-eureka-client</module>
         <module>springcloud-eureka-consumer</module>
-        <module>springcloud-eureka-feign</module>
+        <!--<module>springcloud-eureka-feign</module>-->
         <module>springcloud-eureka-ribbon</module>
         <module>springcloud-eureka-zuul</module>
         <module>springcloud-eureka-admin-server</module>
         <module>springcloud-eureka-config-server</module>
         <module>springcloud-eureka-config-client</module>
+        <module>springcloud-eureka-client-account</module>
+        <module>springcloud-eureka-client-order</module>
+        <module>springcloud-eureka-client-storage</module>
+        <module>springcloud-eureka-client-seata-business</module>
     </modules>
 
     <properties>
