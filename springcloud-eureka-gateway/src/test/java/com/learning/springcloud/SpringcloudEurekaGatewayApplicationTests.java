@@ -4,12 +4,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringcloudEurekaClientApplicationTests {
+class SpringcloudEurekaGatewayApplicationTests {
 
-    @Test
-    public void test() {
-
-
-    }
+	@Test
+	void contextLoads() {
+	}
 
 }
