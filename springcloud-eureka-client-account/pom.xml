@@ -57,6 +57,12 @@
             <version>1.2.10</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
+            <version>2.2.1.RELEASE</version>
+        </dependency>
+
         <!--mysql数据库驱动-->
         <dependency>
             <groupId>mysql</groupId>
