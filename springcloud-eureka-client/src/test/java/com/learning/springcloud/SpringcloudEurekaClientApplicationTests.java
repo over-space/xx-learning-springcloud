@@ -7,9 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 class SpringcloudEurekaClientApplicationTests {
 
     @Test
-    public void test() {
-
-
+    public void test(){
     }
 
 }

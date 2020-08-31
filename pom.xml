@@ -29,6 +29,7 @@
         <module>springcloud-eureka-client-order</module>
         <module>springcloud-eureka-client-storage</module>
         <module>springcloud-eureka-client-seata-business</module>
+        <module>springcloud-eureka-common</module>
     </modules>
 
     <properties>
