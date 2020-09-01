@@ -1,6 +1,7 @@
 package com.learning.springcloud.feign.rule;
 
 import com.learning.springcloud.feign.util.ThreadLocalUtil;
+import io.jmnarloch.spring.cloud.ribbon.support.RibbonFilterContextHolder;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -26,9 +27,9 @@ public class GrayAspect {
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
         String version = request.getParameter("version");
 
-        Map<String, String> map = new HashMap<>(1);
-        map.put("version", "v1");
-        ThreadLocalUtil.set(map);
+        if(version != null && version.length() > 0){
+            RibbonFilterContextHolder.getCurrentContext().add("version", version);
+        }
     }
 
 }
