@@ -29,7 +29,8 @@ public class MyZuulFilter extends ZuulFilter {
 
     @Override
     public boolean shouldFilter() {
-        return true;
+        Boolean flag = (Boolean) RequestContext.getCurrentContext().get(LimitRateFilter.LIMIT_RATE_KEY);
+        return flag == null || flag;
     }
 
     @Override

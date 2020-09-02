@@ -1,6 +1,6 @@
 package com.learning.springcloud.mapper;
 
-import com.learning.springcloud.common.entity.EmployeeEntity;
+import com.learning.springcloud.entity.EmployeeEntity;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 

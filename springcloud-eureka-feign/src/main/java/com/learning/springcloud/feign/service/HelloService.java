@@ -8,4 +8,7 @@ public interface HelloService {
 
     @GetMapping("/hello")
     String hello();
+
+    @GetMapping("/header")
+    String header();
 }

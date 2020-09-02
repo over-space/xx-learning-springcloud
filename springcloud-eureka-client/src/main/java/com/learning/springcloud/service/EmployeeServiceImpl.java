@@ -1,7 +1,6 @@
 package com.learning.springcloud.service;
 
-import com.learning.springcloud.common.entity.EmployeeEntity;
-import com.learning.springcloud.common.service.EmployeeService;
+import com.learning.springcloud.entity.EmployeeEntity;
 import com.learning.springcloud.mapper.EmployeeMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

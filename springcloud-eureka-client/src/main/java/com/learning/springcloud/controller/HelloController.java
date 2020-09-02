@@ -1,5 +1,6 @@
 package com.learning.springcloud.controller;
 
+import brave.http.HttpServerRequest;
 import com.google.common.collect.Lists;
 import com.learning.springcloud.service.HealthService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -28,6 +30,12 @@ public class HelloController {
     @GetMapping("/hello")
     public String hello(){
         return "hello spring cloud, port=" + port + ", foo=" + foo;
+    }
+
+    @GetMapping("/header")
+    public String header(HttpServletRequest request){
+        String token = request.getHeader("token");
+        return "hello spring cloud, port=" + port + ", token=" + token;
     }
 
     @GetMapping("/list")

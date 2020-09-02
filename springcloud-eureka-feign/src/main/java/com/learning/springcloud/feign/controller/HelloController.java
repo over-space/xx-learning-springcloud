@@ -13,18 +13,18 @@ public class HelloController {
 
     private Logger logger = LoggerFactory.getLogger(HelloController.class);
 
-    @Value("${server.port}")
-    private String port;
-
 
     @Autowired
     private HelloService helloService;
 
     @RequestMapping("/hello")
     public String hello(){
-        logger.info("------------------------ ribbon feign --------------------port : {}", port);
-
         return helloService.hello();
+    }
+
+    @RequestMapping("/header")
+    public String header(){
+        return helloService.header();
     }
 
 }

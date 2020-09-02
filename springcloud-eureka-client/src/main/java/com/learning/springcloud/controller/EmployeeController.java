@@ -1,7 +1,7 @@
 package com.learning.springcloud.controller;
 
-import com.learning.springcloud.common.entity.EmployeeEntity;
-import com.learning.springcloud.common.service.EmployeeService;
+import com.learning.springcloud.entity.EmployeeEntity;
+import com.learning.springcloud.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
