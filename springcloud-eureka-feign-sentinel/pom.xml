@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.learning.springcloud.feign</groupId>
-	<artifactId>springcloud-eureka-feign</artifactId>
+	<artifactId>springcloud-eureka-feign-sentinel</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springcloud-eureka-feign</name>
+	<name>springcloud-eureka-feign-sentinel</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -42,6 +42,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.alibaba.cloud/spring-cloud-starter-alibaba-sentinel -->
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+			<version>2.2.1.RELEASE</version>
+		</dependency>
 
 		<!--<dependency>-->
 		<!--	<groupId>de.codecentric</groupId>-->
@@ -49,20 +55,20 @@
 		<!--	<version>2.3.0</version>-->
 		<!--</dependency>-->
 
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
-		</dependency>
+		<!--<dependency>-->
+		<!--	<groupId>org.springframework.cloud</groupId>-->
+		<!--	<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>-->
+		<!--</dependency>-->
 
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
-		</dependency>
+		<!--<dependency>-->
+		<!--	<groupId>org.springframework.cloud</groupId>-->
+		<!--	<artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>-->
+		<!--</dependency>-->
 
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-zipkin</artifactId>
-		</dependency>
+		<!--<dependency>-->
+		<!--	<groupId>org.springframework.cloud</groupId>-->
+		<!--	<artifactId>spring-cloud-starter-zipkin</artifactId>-->
+		<!--</dependency>-->
 
 		<dependency>
 			<groupId>io.github.openfeign</groupId>
