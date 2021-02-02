@@ -5,6 +5,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>springcloud-dubbo</module>
+        <module>springcloud-zookeeper</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
