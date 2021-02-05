@@ -1,0 +1,30 @@
+package com.learning.rocketmq;
+
+import org.apache.rocketmq.client.exception.MQBrokerException;
+import org.apache.rocketmq.client.exception.MQClientException;
+import org.apache.rocketmq.client.producer.DefaultMQProducer;
+import org.apache.rocketmq.client.producer.SendResult;
+import org.apache.rocketmq.common.message.Message;
+import org.apache.rocketmq.remoting.exception.RemotingException;
+
+/**
+ * 消息发送方
+ * @author lifang
+ * @since 2021/2/4
+ */
+public class RocketMQProducer07 {
+
+    public static void main(String[] args) throws MQClientException, RemotingException, InterruptedException, MQBrokerException {
+        DefaultMQProducer producer = new DefaultMQProducer("producer005-1");
+        producer.setNamesrvAddr("192.168.3.23:9876");
+        producer.start();
+
+        // topic 消息将要发送的地址
+        // body 消息具体内容
+        Message message = new Message("msg005", "hello rocketmq".getBytes());
+        SendResult send = producer.send(message);
+
+        producer.shutdown();
+        System.out.println(send);
+    }
+}
